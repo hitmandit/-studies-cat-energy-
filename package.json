@@ -1,7 +1,7 @@
 {
-  "name": "{{projectName}}",
+  "name": "-studies-cat-energy-",
   "private": true,
-  "description": "Личный проект «{{projectTitle}}» от HTML Academy",
+  "description": "Личный -studies-cat-energy- от HTML_Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
@@ -12,14 +12,16 @@
     "gulp-postcss": "9.0.1",
     "postcss": "8.3.11",
     "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.11"
+    "stylelint-config-htmlacademy": "0.1.11",
+    "homepage": "https://hitmandit.github.io/-studies-cat-energy-",
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
-    "start": "gulp"
+    "start": "gulp",
+    "deploy": "gh-pages - d source"
   },
   "browserslist": [
     "last 2 versions",
@@ -39,5 +41,8 @@
   "engines": {
     "node": "^16"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }

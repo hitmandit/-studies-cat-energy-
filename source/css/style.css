@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/oswaldregular.woff2") format("woff2"), url("/fonts/oswaldregular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/oswaldmedium.woff2") format("woff2"), url("/fonts/oswaldmedium.woff") format("woff");
+}
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -309,26 +323,17 @@ template {
 *::after {
   box-sizing: border-box;
 }
-.page {
-  height: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
 img {
   max-width: 100%;
   height: auto;
-}
-@font-face {
-  font-family: "Oswald";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("/source/fonts/oswaldregular.woff2") format("woff2"), url("/source/fonts/oswaldregular.woff") format("woff");
-}
-@font-face {
-  font-family: "Oswald";
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  src: url("/source/fonts/oswaldmedium.woff2") format("woff2"), url("/source/fonts/oswaldmedium.woff") format("woff");
 }
 .visually-hidden {
   position: absolute;
@@ -340,12 +345,240 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.button {
+  font-family: "Oswald", "Arial", sans-serif;
+  background-color: #68b738;
+  color: #ffffff;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
 .page {
+  height: 100%;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
 .page__body {
   margin: 0;
+}
+.page-main__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+}
+.page-main__subheading {
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+}
+.main-nav__list {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.main-nav__item {
+  list-style-type: none;
+}
+.main-nav__item a {
+  color: #000000;
+  text-decoration: none;
+}
+.promo {
+  font-family: "Oswald", "Arial", sans-serif;
+  background-color: #68b738;
+  background-image: url("/img/promo.jpg");
+  background-repeat: no-repeat;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.promo__heading {
+  font-size: 36px;
+  line-height: 36px;
+}
+.promo__text {
+  line-height: 14px;
+}
+.catalog-sections__item {
+  background-color: #f2f2f2;
+}
+.catalog-sections__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+}
+.catalog-sections__text {
+  color: #444444;
+}
+.catalog-sections__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.process__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+}
+.process__item {
+  list-style-type: none;
+}
+.example {
+  background-color: #f2f2f2;
+}
+.example__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+}
+.example__text {
+  color: #444444;
+}
+.example__title {
+  font-size: 12px;
+  line-height: 12px;
+  background-color: #f2f2f2;
+}
+.example__definition {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.example__spending {
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 20px;
+}
+.switcher__button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.page-footer__menu {
+  background-color: #f2f2f2;
+}
+.contacts__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.contacts__address {
+  line-height: 20px;
+  color: #444444;
+}
+.card__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 20px;
+  color: #222222;
+  text-transform: uppercase;
+}
+.card__link {
+  text-decoration: none;
+}
+.card__list {
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+.card__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+.show-more__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+}
+.show-more__text {
+  font-size: 12px;
+  line-height: 16px;
+}
+.show-more__button {
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #f2f2f2;
+  color: #444444;
+}
+.catalog-additional__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+}
+.card-row {
+  list-style-type: none;
+}
+.card-row__heading {
+  font-family: "Oswald", "Arial", sans-serif;
+  line-height: 16px;
+  color: #222222;
+  text-transform: uppercase;
+}
+.card-row__definition {
+  line-height: 14px;
+}
+.card-row__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+.offer__text {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: #68b738;
+  background-image: url("/img/catcase.jpg");
+  background-repeat: no-repeat;
+}
+.form {
+  font-family: "Oswald", "Arial", sans-serif;
+}
+.form__button {
+  font-size: 16px;
+  line-height: 20px;
+}
+.form__additional {
+  font-family: "Arial", sans-serif;
+  line-height: 16px;
+}
+.field-group {
+  border: none;
+}
+.field-group__heading {
+  font-size: 24px;
+  line-height: 26px;
+}
+.field-group__list {
+  color: #444444;
+}
+.field-group__item {
+  list-style-type: none;
+}
+.field {
+  text-transform: uppercase;
+}
+.field__lead {
+  font-size: 16px;
+  color: #444444;
+}
+.field__input {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.field__input::placeholder {
+  color: #444444;
+}
+.control-radio {
+  font-size: 16px;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */
