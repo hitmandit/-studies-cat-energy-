@@ -1,0 +1,36 @@
+.page-header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.page-header__bar {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-height: 66px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__bar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__toggler {
+    display: none;
+  }
+}
+
