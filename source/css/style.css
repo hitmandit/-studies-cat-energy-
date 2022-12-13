@@ -346,12 +346,21 @@ img {
   overflow: hidden;
 }
 .button {
+  position: relative;
+  min-height: 40px;
   font-family: "Oswald", "Arial", sans-serif;
   background-color: #68b738;
   color: #ffffff;
   border: none;
   text-decoration: none;
   text-transform: uppercase;
+}
+.button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 .page {
   height: 100%;
@@ -362,6 +371,37 @@ img {
 .page__body {
   margin: 0;
 }
+.page-header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .page-header__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+.page-header__bar {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  min-height: 66px;
+}
+@media (min-width: 768px) {
+  .page-header__bar {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .page-header__toggler {
+    display: none;
+  }
+}
 .page-main__heading {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
@@ -371,19 +411,81 @@ img {
   text-transform: uppercase;
   font-family: "Oswald", "Arial", sans-serif;
 }
+.logo {
+  text-decoration: none;
+}
+.logo__image {
+  margin-right: 56px;
+}
+@media (min-width: 768px) {
+  .logo__image {
+    margin-right: 0;
+  }
+}
+.main-nav {
+  position: absolute;
+  top: 66px;
+  right: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .main-nav {
+    position: static;
+  }
+}
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
+  text-align: center;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .main-nav__list {
+    flex-direction: row;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .main-nav__list--hidden {
+    display: none;
+  }
 }
 .main-nav__item {
   list-style-type: none;
 }
+@media (min-width: 768px) {
+  .main-nav__item {
+    margin-right: 35px;
+  }
+  :last-child {
+    margin-right: 0;
+  }
+}
 .main-nav__item a {
+  display: block;
+  padding-top: 22px;
+  padding-bottom: 22px;
   color: #000000;
   text-decoration: none;
+  border-top: 1px solid #e6e6e6;
+}
+.main-nav__item:last-child a {
+  border-bottom: 1px solid #e6e6e6;
+}
+@media (min-width: 768px) {
+  .main-nav__item a,
+  .main-nav__item:last-child a {
+    border: none;
+  }
 }
 .promo {
   font-family: "Oswald", "Arial", sans-serif;
@@ -391,29 +493,87 @@ img {
   background-image: url("/img/promo.jpg");
   background-repeat: no-repeat;
   color: #ffffff;
-  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .promo {
+    color: #000000;
+  }
+}
+.promo__wrapper {
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
 }
 .promo__heading {
+  margin: 0;
+  padding-bottom: 25px;
   font-size: 36px;
   line-height: 36px;
 }
+@media (min-width: 768px) {
+  .promo__heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
 .promo__text {
+  margin: 0;
+  padding-bottom: 29px;
   line-height: 14px;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .promo__text {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.promo__button {
+  display: block;
+}
+.catalog-sections__wrapper {
+  margin: 20px;
+}
+@media (min-width: 768px) {
+  .catalog-sections__wrapper {
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
 .catalog-sections__item {
   background-color: #f2f2f2;
 }
 .catalog-sections__heading {
+  margin-left: 90px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 }
+@media (min-width: 768px) {
+  .catalog-sections__heading {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
 .catalog-sections__text {
   color: #444444;
+  margin-left: 20px;
+  margin-right: 33px;
+}
+@media (min-width: 768px) {
+  .catalog-sections__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+  }
 }
 .catalog-sections__link {
+  margin-left: 20px;
+  margin-right: 20px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -421,24 +581,94 @@ img {
   text-transform: uppercase;
   text-decoration: none;
 }
+@media (min-width: 768px) {
+  .catalog-sections__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.process__wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .process__wrapper {
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
 .process__heading {
+  margin: 0;
+  padding-bottom: 42px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 40px;
 }
+@media (min-width: 768px) {
+  .process__heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+.process__list {
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .process__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .process__item {
+  padding-bottom: 26px;
   list-style-type: none;
+}
+@media (min-width: 768px) {
+  .process__item {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .example {
   background-color: #f2f2f2;
 }
+.example__wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (min-width: 768px) {
+  .example__wrapper {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
 .example__heading {
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 40px;
 }
+@media (min-width: 768px) {
+  .example__heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
 .example__text {
+  margin: 0;
+  padding-bottom: 20px;
   color: #444444;
+}
+@media (min-width: 768px) {
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .example__title {
   font-size: 12px;

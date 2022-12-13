@@ -13,7 +13,7 @@
     "postcss": "8.3.11",
     "stylelint": "13.13.1",
     "stylelint-config-htmlacademy": "0.1.11",
-    "homepage": "https://hitmandit.github.io/-studies-cat-energy-",
+    "homepage": "https://hitmandit.github.io/-studies-cat-energy-"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -21,7 +21,7 @@
     "lint": "npm run editorconfig && npm run stylelint",
     "build": "gulp styles",
     "start": "gulp",
-    "deploy": "gh-pages - d source"
+    "deploy": "gh-pages -d source"
   },
   "browserslist": [
     "last 2 versions",
