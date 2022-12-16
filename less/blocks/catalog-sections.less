@@ -10,12 +10,32 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .catalog-sections__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+}
+
 .catalog-sections__item {
+  margin-bottom: 20px;
   background-color: @color-basic-grey;
 }
 
+@media (min-width: @tablet-width) {
+  .catalog-sections__item {
+    margin-bottom: 30px;
+  }
+}
+
 .catalog-sections__heading {
+  margin: 0;
   margin-left: 90px;
+  margin-bottom: 29px;
+  padding-top: 20px;
   font-family: @font-heading;
   font-weight: 400;
   font-size: 24px;
@@ -25,19 +45,26 @@
 
 @media (min-width: @tablet-width) {
   .catalog-sections__heading {
+    padding-top: 77px;
+    margin-left: 53px;
+    margin-bottom: 24px;
     font-size: 36px;
     line-height: 36px;
   }
 }
 
 .catalog-sections__text {
-  color: @color-dark-grey-1;
+  margin: 0;
   margin-left: 20px;
   margin-right: 33px;
+  margin-bottom: 38px;
+  color: @color-dark-grey-1;
 }
 
 @media (min-width: @tablet-width) {
   .catalog-sections__text {
+    margin-left: 53px;
+    margin-bottom: 48px;
     font-size: 16px;
     line-height: 24px;
     color: @color-black;
@@ -45,8 +72,10 @@
 }
 
 .catalog-sections__link {
+  display: inline-block;
+  margin: 0;
   margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 22px;
   font-family: @font-heading;
   font-size: 16px;
   line-height: 16px;
@@ -56,7 +85,10 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-sections__text {
+  .catalog-sections__link {
+    margin-left: 52px;
+    padding-right: 57px;
+    margin-bottom: 57px;
     font-size: 20px;
     line-height: 30px;
   }

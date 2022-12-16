@@ -30,7 +30,7 @@
     flex-direction: row;
     font-weight: 400;
     font-size: 18px;
-    line-height: 18px;
+    line-height: 24px;
   }
 }
 
@@ -48,10 +48,10 @@
 @media (min-width: @tablet-width) {
   .main-nav__item {
     margin-right: 35px;
-  }
 
-  &:last-child {
-    margin-right: 0;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -62,6 +62,14 @@
   color: @color-black;
   text-decoration: none;
   border-top: 1px solid @color-grey-decoration-1;
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__item a {
+    font-size: 20px;
+    line-height: 30px;
+    color: @color-basic;
+  }
 }
 
 .main-nav__item:last-child a {
