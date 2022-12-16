@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="./css/style.css" rel="stylesheet">
   <title>Магазин «CAT ENERGY» Функциональное питание для котов</title>
 </head>
@@ -10,15 +11,19 @@
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
-      <a class="page-header__logo logo" href="#">
-        <img class="logo__image" src="./img/logo.svg" width="34" height="38" alt="Магазин «CAT ENERGY»">
-        <img class="logo__sign" src="./img/logo-description.svg" width="101" height="18" alt="">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list">
+      <div class="page-header__bar">
+        <a class="page-header__logo logo" href="#">
+          <img class="logo__image" src="./img/logo.svg" width="34" height="38" alt="Магазин «CAT ENERGY»">
+          <img class="logo__sign" src="./img/logo-description.svg" width="101" height="18" alt="">
+        </a>
+        <div class="page-header__toggler">
+          <button class="page-header__toggler-button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
+      </div>
+      <nav class="page-header__nav main-nav">
+        <ul class="main-nav__list main-nav__list--hidden">
           <li class="main-nav__item main-nav__item--current">
             <a href="./index.html">Главная</a>
           </li>
@@ -42,7 +47,7 @@
 
         <article class="catalog-list__item card">
           <a class="card__link" href="#">
-            <h3 class="card__heading" href="#"> Cat Energy Pro 500 г</h3>
+            <h3 class="card__heading"> Cat Energy Pro 500 г</h3>
           </a>
           <img class="card__img" src="./img/catalog/cat-energy-pro-500g-chicken.png" width="68" height="86" alt=""
             aria-hidden="true">
@@ -272,14 +277,14 @@
     <div class="page-footer__contacts contacts">
       <div class="contacts-wrapper">
         <h2 class=" visually-hidden">Контакты</h2>
-        <p class="contacts__heading">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contacts__heading">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+        <p class="contacts__address">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
       </div>
     </div>
     <img class="page-footer__map" src="./img/map-mobile.jpg" width="320" height="362" alt="Карта к офису">
     <div class="page-footer__menu">
       <div class="page-footer__menu-wrapper">
-        <a class="page-footer__menu logo">
+        <a class="page-footer__logo logo">
           <img class="logo__image" src="./img/logo-description.svg" width="128" height="24" alt="Cat Energy">
         </a>
         <ul class="page-footer__social social">
@@ -301,6 +306,7 @@
         </ul>
         <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано в HTML Academy</span>
+          <img class="developer__sign" src="./img/html-academy-logo-description.svg" width="114" height="18" alt="">
           <img class="developer__image" src="./img/html-academy-logo.svg" width="27" height="34" alt="">
         </a>
       </div>

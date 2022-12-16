@@ -1,9 +1,15 @@
 .logo {
+  display: block;
   text-decoration: none;
+  text-align: center;
 }
 
-.logo__image {
-  margin-right: 56px;
+@media (min-width: @tablet-width) {
+  .logo {
+    border: none;
+    padding: 0;
+    text-align: start;
+  }
 }
 
 @media (min-width: @tablet-width) {

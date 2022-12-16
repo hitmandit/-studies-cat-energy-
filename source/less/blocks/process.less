@@ -12,6 +12,13 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .process__wrapper {
+    margin-left: 110px;
+    margin-right: 110px;
+  }
+}
+
 .process__heading {
   margin: 0;
   padding-bottom: 42px;
@@ -35,7 +42,15 @@
 @media (min-width: @tablet-width) {
   .process__list {
     display: grid;
+    gap: 30px;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .process__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
   }
 }
 

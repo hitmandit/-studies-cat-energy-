@@ -1,5 +1,20 @@
 .field-group {
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   border: none;
+  border-bottom: 1px solid @color-grey-3;
+
+  &:last-of-type,
+  &:nth-last-of-type(2) {
+    border: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .field-group {
+    border: none;
+  }
 }
 
 .field-group__heading {
@@ -8,9 +23,51 @@
 }
 
 .field-group__list {
+  margin: 0;
+  padding: 0;
   color: @color-dark-grey-1;
+}
+
+@media (min-width: @tablet-width) {
+  .field-group__list--additionally {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-group__list--additionally {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    & .field-group__item {
+      width: 221px;
+      margin-right: 105px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    & .control__radio {
+      color: @color-black;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-group__list-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
 }
 
 .field-group__item {
   list-style-type: none;
+  margin-bottom: 14px;
+}
+
+@media (min-width: @tablet-width) {
+  .field-group__item {
+    margin-bottom: 20px;
+  }
 }
