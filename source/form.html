@@ -17,20 +17,20 @@
           <img class="logo__sign" src="./img/logo-description.svg" width="101" height="18" alt="">
         </a>
         <div class="page-header__toggler">
-          <button class="page-header__toggler-button">
+          <button class="page-header__toggler-button page-header__toggler-button--closed">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
       </div>
-      <nav class="page-header__nav main-nav">
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
         <ul class="main-nav__list main-nav__list--hidden">
-          <li class="main-nav__item main-nav__item--current">
+          <li class="main-nav__item main-nav__item--black-color">
             <a href="./index.html">Главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--black-color">
             <a href="./catalog.html">Каталог продукции</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--black-color main-nav__item--current">
             <a>Подбор программы</a>
           </li>
         </ul>
@@ -204,6 +204,27 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggler = document.querySelector('.page-header__toggler-button');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggler.addEventListener('click', function () {
+      if (navToggler.classList.contains('page-header__toggler-button--closed')) {
+        navToggler.classList.remove('page-header__toggler-button--closed');
+        navMain.classList.remove('main-nav--closed');
+        navToggler.classList.add('page-header__toggler-button--opened');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navToggler.classList.add('page-header__toggler-button--closed');
+        navMain.classList.add('main-nav--closed');
+        navToggler.classList.remove('page-header__toggler-button--opened');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 
 </body>
 

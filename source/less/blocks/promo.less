@@ -20,22 +20,21 @@
   display: flex;
   flex-direction: column;
   padding-top: 27px;
-  padding-left: 20px;
-  padding-right: 20px;
+  .margin-mobile-20px();
 }
 
 @media (min-width: @tablet-width) {
   .promo__wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    .margin-tablet-30px();
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 62px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo__wrapper {
-    padding-left: 110px;
-    padding-right: 110px;
+    .margin-desktop-110px();
   }
 }
 
@@ -59,17 +58,19 @@
 
 .promo__text {
   margin: 0;
-  margin-left: 87px;
   padding-bottom: 29px;
   line-height: 14px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
   .promo__text {
+    margin-left: 87px;
     padding-bottom: 49px;
     font-size: 20px;
     line-height: 20px;
+    text-align: start;
   }
 }
 

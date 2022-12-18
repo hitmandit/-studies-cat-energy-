@@ -1,3 +1,7 @@
+.show-more {
+  text-align: center;
+}
+
 .show-more__heading {
   font-family: @font-heading;
   font-size: 16px;
@@ -6,14 +10,40 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .show-more__heading {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
 .show-more__text {
   font-size: 12px;
   line-height: 16px;
 }
 
+@media (min-width: @tablet-width) {
+  .show-more__text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
 .show-more__button {
+  display: block;
+  .margin-mobile-20px();
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
   font-size: 16px;
   line-height: 20px;
   background-color: @color-basic-grey;
   color: @color-dark-grey-1;
+}
+
+@media (min-width: @tablet-width) {
+  .show-more__button {
+    margin-left: 38px;
+    margin-right: 38px;
+  }
 }
