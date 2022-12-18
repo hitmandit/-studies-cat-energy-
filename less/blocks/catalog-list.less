@@ -1,0 +1,32 @@
+@media (min-width: @tablet-width) {
+  .catalog-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    .margin-tablet-30px();
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px;
+    .margin-desktop-110px();
+  }
+}
+
+.catalog-list__item {
+  border-top: 1px solid @color-grey-1;
+  border-bottom: 1px solid @color-grey-1;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-list__item {
+    border: none;
+
+    &:last-child {
+      border: 1px solid @color-grey-1;
+    }
+  }
+}

@@ -17,13 +17,13 @@
           <img class="logo__sign" src="./img/logo-description.svg" width="101" height="18" alt="">
         </a>
         <div class="page-header__toggler">
-          <button class="page-header__toggler-button">
+          <button class="page-header__toggler-button page-header__toggler-button--closed">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
       </div>
-      <nav class="page-header__nav main-nav">
-        <ul class="main-nav__list main-nav__list--hidden">
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
+        <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--current">
             <a>Главная</a>
           </li>
@@ -159,6 +159,27 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggler = document.querySelector('.page-header__toggler-button');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggler.addEventListener('click', function () {
+      if (navToggler.classList.contains('page-header__toggler-button--closed')) {
+        navToggler.classList.remove('page-header__toggler-button--closed');
+        navMain.classList.remove('main-nav--closed');
+        navToggler.classList.add('page-header__toggler-button--opened');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navToggler.classList.add('page-header__toggler-button--closed');
+        navMain.classList.add('main-nav--closed');
+        navToggler.classList.remove('page-header__toggler-button--opened');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 
 </body>
 

@@ -7,8 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    padding-left: 110px;
-    padding-right: 110px;
+    .margin-desktop-110px();
 
     & .form__group {
       padding: 0;
@@ -50,14 +49,12 @@
 
 @media (min-width: @desktop-width) {
   .form__group {
-    padding-left: 110px;
-    padding-right: 110px;
+    .margin-desktop-110px();
   }
 }
 
 .form__sending {
-  margin-left: 20px;
-  margin-right: 20px;
+  .margin-mobile-20px();
 }
 
 @media (min-width: @tablet-width) {
@@ -73,8 +70,7 @@
 @media (min-width: @desktop-width) {
   .form__sending {
     gap: 80px;
-    margin-left: 110px;
-    margin-right: 110px;
+    .margin-desktop-110px();
   }
 }
 
