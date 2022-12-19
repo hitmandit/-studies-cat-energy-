@@ -1,6 +1,55 @@
+.switcher {
+  position: relative;
+  display: flex;
+  width: 210px;
+  justify-content: space-between;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    height: 12px;
+    width: 86px;
+    background-color: @color-white;
+    border: 1px solid @color-grey-4;
+    border-radius: 6px;
+    transform: translate(-50%, 0);
+  }
+}
+
+.switcher--right-active {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 52%;
+    width: 36px;
+    height: 6px;
+    background-color: @color-basic;
+    border-radius: 6px;
+  }
+}
+
+.switcher--left-active {
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    right: 52%;
+    width: 36px;
+    height: 6px;
+    background-color: @color-basic;
+    border-radius: 6px;
+  }
+}
+
 .switcher__button {
   font-family: @font-heading;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  border: none;
 }

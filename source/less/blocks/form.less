@@ -2,8 +2,8 @@
   font-family: @font-heading;
 }
 
-@media (min-width: @desktop-width) {
-  .form-wrapper {
+.form-wrapper {
+  @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -17,18 +17,14 @@
       border: 1px solid @color-grey-decoration-2;
     }
   }
-}
 
-@media (min-width: @tablet-width) {
-  .form-wrapper {
+  @media (min-width: @tablet-width) {
     & .field-group:last-of-type .field-group__list {
       border: 1px solid @color-grey-decoration-2;
     }
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form-wrapper {
+  @media (min-width: @desktop-width) {
     & .field-group:last-of-type .field-group__list {
       border: 0;
     }
@@ -38,37 +34,29 @@
 .form__group {
   padding-left: 20px;
   padding-right: 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .form__group {
+  @media (min-width: @tablet-width) {
     padding-left: 70px;
     padding-right: 70px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__group {
+  @media (min-width: @desktop-width) {
     .margin-desktop-110px();
   }
 }
 
 .form__sending {
   .margin-mobile-20px();
-}
 
-@media (min-width: @tablet-width) {
-  .form__sending {
+  @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     margin-left: 70px;
     margin-right: 70px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__sending {
+  @media (min-width: @desktop-width) {
     gap: 80px;
     .margin-desktop-110px();
   }
@@ -79,32 +67,26 @@
   width: 100%;
   font-size: 16px;
   line-height: 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .form__button {
+  @media (min-width: @tablet-width) {
     padding: 13px 45px;
     font-size: 20px;
     line-height: 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .form__button {
+  @media (min-width: @desktop-width) {
     padding: 15px 187px;
     font-size: 20px;
     line-height: 0;
   }
-}
 
-.form__additional {
-  font-family: @font-body;
-  line-height: 16px;
-  text-align: center;
-}
-
-@media (min-width: @tablet-width) {
   .form__additional {
+    font-family: @font-body;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  @media (min-width: @tablet-width) {
     text-align: start;
   }
 }

@@ -9,10 +9,8 @@
   font-size: 16px;
   color: @color-dark-grey-1;
   white-space: nowrap;
-}
 
-@media (min-width: @tablet-width) {
-  .field__lead {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
@@ -28,26 +26,22 @@
   text-transform: uppercase;
   border: 1px solid @color-grey-decoration-2;
   border-radius: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .field__input {
+  @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
-}
 
-.field__input::placeholder {
-  color: @color-dark-grey-1;
+  &::placeholder {
+    color: @color-dark-grey-1;
+  }
 }
 
 .field__texarea {
   min-height: 150px;
   resize: vertical;
-}
 
-@media (min-width: @tablet-width) {
-  .field__texarea {
+  @media (min-width: @tablet-width) {
     min-height: 174px;
   }
 }

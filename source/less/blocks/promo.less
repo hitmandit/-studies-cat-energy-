@@ -2,17 +2,38 @@
   margin-bottom: 20px;
   font-family: @font-heading;
   background-color: @color-basic;
-  background-image: url("/img/promo.jpg");
   background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image:
+    url("/img/promo.jpg"),
+    linear-gradient(@color-basic 0, @color-basic 302px, @color-white 302px);
   color: @color-white;
-}
 
-@media (min-width: @tablet-width) {
-  .promo {
+  @media (min-width: @tablet-width) {
     margin-bottom: 0;
     background-image: none;
     background-color: @color-white;
     color: @color-black;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    background-color: transparent;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -200px;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -2;
+
+      background-color: @color-basic;
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-image: url("/img/promo-desktop.jpg");
+    }
   }
 }
 
@@ -21,20 +42,18 @@
   flex-direction: column;
   padding-top: 27px;
   .margin-mobile-20px();
-}
 
-@media (min-width: @tablet-width) {
-  .promo__wrapper {
+  @media (min-width: @tablet-width) {
     .margin-tablet-30px();
     padding-left: 0;
     padding-right: 0;
     padding-top: 62px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .promo__wrapper {
-    .margin-desktop-110px();
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -44,10 +63,8 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
-}
 
-@media (min-width: @tablet-width) {
-  .promo__heading {
+  @media (min-width: @tablet-width) {
     margin-left: 87px;
     padding-bottom: 41px;
     font-size: 60px;
@@ -62,10 +79,8 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
-}
 
-@media (min-width: @tablet-width) {
-  .promo__text {
+  @media (min-width: @tablet-width) {
     margin-left: 87px;
     padding-bottom: 49px;
     font-size: 20px;
@@ -79,15 +94,15 @@
   margin-right: auto;
 }
 
-@media (min-width: @tablet-width) {
-  .promo__button {
+.promo__button {
+  @media (min-width: @tablet-width) {
     width: 244px;
     margin-left: 87px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .promo__button-text {
+.promo__button-text {
+  @media (min-width: @tablet-width) {
     padding-top: 14px;
     padding-bottom: 14px;
     font-size: 20px;
