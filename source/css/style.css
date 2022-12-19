@@ -794,7 +794,7 @@ img {
   left: 22px;
   width: 50px;
   height: 53px;
-  background-image: url("/img/cat-thin.svg");
+  background-image: url("../img/cat-thin.svg");
   background-repeat: no-repeat;
 }
 .catalog-sections__item:last-of-type .catalog-sections__heading::before {
@@ -804,7 +804,7 @@ img {
   left: 13px;
   width: 67px;
   height: 50px;
-  background-image: url("/img/cat-fat.svg");
+  background-image: url("../img/cat-fat.svg");
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
@@ -868,7 +868,7 @@ img {
   left: 100px;
   width: 32px;
   height: 12px;
-  background-image: url("/img/icon_arrow.svg");
+  background-image: url("../img/icon_arrow.svg");
   background-repeat: no-repeat;
 }
 .catalog-sections__link::before {
@@ -961,7 +961,7 @@ img {
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url("/img/decoration-leaf.svg");
+  background-image: url("../img/decoration-leaf.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -972,7 +972,7 @@ img {
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url("/img/decoration_powder.svg");
+  background-image: url("../img/decoration_powder.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -983,7 +983,7 @@ img {
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url("/img/decoration-cutlery.svg");
+  background-image: url("../img/decoration-cutlery.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
@@ -994,7 +994,7 @@ img {
   left: 0;
   width: 60px;
   height: 60px;
-  background-image: url("/img/decoration-alarm.svg");
+  background-image: url("../img/decoration-alarm.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
