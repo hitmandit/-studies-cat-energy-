@@ -98,23 +98,27 @@
           Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и
           по-прежнему спит по 16 часов в день.</p>
         <dl class="example__list">
-          <dt class="example__title">Снижение веса</dt>
-          <dd class="example__definition">5 кг</dd>
-          <dt class="example__title">Затрачено времени</dt>
-          <dd class="example__definition">60 дней</dd>
+          <div class="example__item">
+            <dt class="example__title">Снижение<br> веса</dt>
+            <dd class="example__definition">5 кг</dd>
+          </div>
+          <div class="example__item">
+            <dt class="example__title">Затрачено<br> времени</dt>
+            <dd class="example__definition">60 дней</dd>
+          </div>
         </dl>
       </div>
       <div class="example__wrapper">
         <p class="example__spending">Затраты на питание: 15 000 руб.</p>
         <div class="example__images">
-          <img class="example__image" src="./img/before-mobile.png" width="280" height="232"
+          <img class="example__image example__image--right" src="./img/before-mobile.png" width="280" height="232"
             alt="Кот до употребления корма: выглядит ленивым, толстым и страшным">
-          <img class="example__image" src="./img/after-mobile.png" width="280" height="232"
-            alt="Кот после употребления корма: выглядит молодым, худым и бодрым">
+          <img class="example__image example__image--left example__image--active" src="./img/after-mobile.png"
+            width="243" height="232" alt="Кот после употребления корма: выглядит молодым, худым и бодрым">
         </div>
-        <div class="example__switcher switcher">
-          <button class="switcher__button" type="button">Было</button>
-          <button class="switcher__button" type="button">Стало</button>
+        <div class="example__switcher switcher switcher--right-active">
+          <button class="switcher__button switcher__button--was" type="button">Было</button>
+          <button class="switcher__button switcher__button--became" type="button">Стало</button>
         </div>
       </div>
     </section>
@@ -179,6 +183,55 @@
         navMain.classList.remove('main-nav--opened');
       }
     });
+
+    var switcherButtonWas = document.querySelector('.switcher__button--was');
+    var switcherButtonBecame = document.querySelector('.switcher__button--became');
+    var exampleImageRight = document.querySelector('.example__image--right');
+    var exampleImageLeft = document.querySelector('.example__image--left');
+    var switcher = document.querySelector('.switcher');
+
+    // Левая кнопка
+    switcherButtonWas.addEventListener('click', function () {
+      if (exampleImageRight.classList.contains('example__image--active')) {
+      } else {
+        exampleImageRight.classList.add('example__image--active');
+      }
+    });
+
+    switcherButtonWas.addEventListener('click', function () {
+      if (exampleImageLeft.classList.contains('example__image--active')) {
+        exampleImageLeft.classList.remove('example__image--active');
+      } else { }
+    });
+
+    switcherButtonWas.addEventListener('click', function () {
+      if (switcher.classList.contains('switcher--right-active')) {
+        switcher.classList.remove('switcher--right-active');
+        switcher.classList.add('switcher--left-active');
+      }
+    });
+
+    // Правая кнопка
+    switcherButtonBecame.addEventListener('click', function () {
+      if (exampleImageLeft.classList.contains('example__image--active')) {
+      } else {
+        exampleImageLeft.classList.add('example__image--active');
+      }
+    });
+
+    switcherButtonBecame.addEventListener('click', function () {
+      if (exampleImageRight.classList.contains('example__image--active')) {
+        exampleImageRight.classList.remove('example__image--active');
+      } else { }
+    });
+
+    switcherButtonBecame.addEventListener('click', function () {
+      if (switcher.classList.contains('switcher--left-active')) {
+        switcher.classList.remove('switcher--left-active');
+        switcher.classList.add('switcher--right-active');
+      }
+    });
+
   </script>
 
 </body>

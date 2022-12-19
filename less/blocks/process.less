@@ -1,18 +1,16 @@
 .process__wrapper {
   .margin-mobile-20px();
   margin-bottom: 50px;
-}
 
-@media (min-width: @tablet-width) {
-  .process__wrapper {
+  @media (min-width: @tablet-width) {
     margin: 0;
     .margin-tablet-30px();
   }
-}
 
-@media (min-width: @desktop-width) {
-  .process__wrapper {
-    .margin-desktop-110px();
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -22,10 +20,8 @@
   font-family: @font-heading;
   font-size: 36px;
   line-height: 40px;
-}
 
-@media (min-width: @tablet-width) {
-  .process__heading {
+  @media (min-width: @tablet-width) {
     font-size: 60px;
     line-height: 60px;
   }
@@ -34,30 +30,88 @@
 .process__list {
   margin: 0;
   padding: 0;
-}
 
-@media (min-width: @tablet-width) {
-  .process__list {
+  @media (min-width: @tablet-width) {
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .process__list {
+  @media (min-width: @desktop-width) {
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
   }
 }
 
 .process__item {
-  padding-bottom: 26px;
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 26px;
+  min-height: 60px;
   list-style-type: none;
-}
 
-@media (min-width: @tablet-width) {
-  .process__item {
+  &:last-child {
+    margin-bottom: 49px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @color-basic;
+  }
+
+  &:nth-child(1)::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("/img/decoration-leaf.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &:nth-child(2)::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("/img/decoration_powder.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &:nth-child(3)::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("/img/decoration-cutlery.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &:nth-child(4)::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-image: url("/img/decoration-alarm.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
   }

@@ -4,10 +4,16 @@
   background-color: @color-basic-grey;
 }
 
-@media (min-width: @tablet-width) {
-  .page-footer__menu-wrapper {
+.page-footer__menu-wrapper {
+  @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     .margin-tablet-30px();
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

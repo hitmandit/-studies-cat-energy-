@@ -1,14 +1,12 @@
-@media (min-width: @tablet-width) {
-  .catalog-list {
+.catalog-list {
+  @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     .margin-tablet-30px();
   }
-}
 
-@media (min-width: @desktop-width) {
-  .catalog-list {
+  @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
@@ -19,10 +17,8 @@
 .catalog-list__item {
   border-top: 1px solid @color-grey-1;
   border-bottom: 1px solid @color-grey-1;
-}
 
-@media (min-width: @tablet-width) {
-  .catalog-list__item {
+  @media (min-width: @tablet-width) {
     border: none;
 
     &:last-child {
