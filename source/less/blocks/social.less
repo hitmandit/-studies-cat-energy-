@@ -1,5 +1,36 @@
 .social {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.social__item {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  list-style-type: none;
+
+  &:last-child {
+    & .social__link svg {
+      fill: @color-grey-5;
+      stroke: @color-grey-5;
+    }
+  }
+}
+
+.social__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  & svg {
+    fill: @color-grey-5;
+  }
 }
