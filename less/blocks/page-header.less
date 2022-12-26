@@ -3,6 +3,10 @@
     border-bottom: 1px solid @color-grey-3;
   }
 
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-left: auto;
     margin-right: auto;
@@ -20,6 +24,11 @@
     justify-content: space-between;
     .margin-tablet-30px();
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .page-header__bar {
@@ -27,12 +36,20 @@
   justify-content: space-between;
   align-items: center;
   .margin-mobile-20px();
-  min-height: 66px;
+
+  @media (max-width: @tablet-width) {
+    min-height: 66px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+.page-header__logo {
+  width: 150px;
+  margin-right: 10px;
 }
 
 .page-header__toggler {

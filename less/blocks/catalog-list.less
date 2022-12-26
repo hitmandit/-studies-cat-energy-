@@ -4,19 +4,22 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     .margin-tablet-30px();
+    margin-bottom: 68px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 80px;
-    .margin-desktop-110px();
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 75px;
+    width: 1220px;
   }
 }
 
 .catalog-list__item {
   border-top: 1px solid @color-grey-1;
-  border-bottom: 1px solid @color-grey-1;
 
   @media (min-width: @tablet-width) {
     border: none;
