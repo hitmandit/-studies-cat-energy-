@@ -6,7 +6,7 @@
   background-position: 50% 0;
   background-image:
     url("/img/promo.jpg"),
-    linear-gradient(@color-basic 0, @color-basic 302px, @color-white 302px);
+    linear-gradient(@color-basic-1 0, @color-basic-1 302px, @color-white 302px);
   color: @color-white;
 
   @media (min-width: @tablet-width) {
@@ -17,19 +17,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
     background-color: transparent;
 
     &::after {
       content: "";
       position: absolute;
-      top: -200px;
+      top: 0;
       right: 0;
-      bottom: 0;
       left: 50%;
       z-index: -2;
-
-      background-color: @color-basic;
+      height: 694px;
+      background-color: @color-basic-1;
       background-position: 0 100%;
       background-repeat: no-repeat;
       background-image: url("/img/promo-desktop.jpg");
@@ -54,6 +52,7 @@
     width: 1220px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 114px;
   }
 }
 
@@ -63,14 +62,25 @@
   font-size: 36px;
   line-height: 36px;
   text-align: center;
+  overflow-wrap: break-word;
 
   @media (min-width: @tablet-width) {
     margin-left: 87px;
-    padding-bottom: 41px;
+    margin-right: 87px;
+    padding-bottom: 45px;
     font-size: 60px;
     line-height: 60px;
     text-align: left;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 40px;
+  }
+}
+
+.promo__image-wrapper {
+  position: relative;
+  text-align: center;
 }
 
 .promo__text {
@@ -79,25 +89,48 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
+  overflow-wrap: break-word;
 
   @media (min-width: @tablet-width) {
     margin-left: 87px;
-    padding-bottom: 49px;
+    padding-bottom: 45px;
     font-size: 20px;
     line-height: 20px;
     text-align: start;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 52px;
   }
 }
 
 .promo__image {
   margin-left: auto;
   margin-right: auto;
+  animation-name: fadeInLeft;
+  animation-duration: 1.5s;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
 }
 
 .promo__button {
+  overflow-wrap: break-word;
+
   @media (min-width: @tablet-width) {
     width: 244px;
+    margin-bottom: 526px;
     margin-left: 87px;
+    z-index: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 267px;
   }
 }
 

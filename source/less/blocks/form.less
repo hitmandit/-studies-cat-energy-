@@ -3,6 +3,21 @@
 }
 
 .form-wrapper {
+  & .form__group {
+    border-bottom: 1px solid @color-grey-3;
+  }
+
+  & .field-group {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
+      padding-bottom: 72px;
+      border: none;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -46,6 +61,7 @@
 }
 
 .form__sending {
+  margin-top: 34px;
   .margin-mobile-20px();
 
   @media (min-width: @tablet-width) {
@@ -79,14 +95,16 @@
     font-size: 20px;
     line-height: 0;
   }
+}
 
-  .form__additional {
-    font-family: @font-body;
-    line-height: 16px;
-    text-align: center;
-  }
+.form__additional {
+  margin-top: 21px;
+  margin-bottom: 32px;
+  font-family: @font-body;
+  line-height: 16px;
+  text-align: center;
+}
 
-  @media (min-width: @tablet-width) {
-    text-align: start;
-  }
+@media (min-width: @tablet-width) {
+  text-align: start;
 }

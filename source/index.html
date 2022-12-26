@@ -44,8 +44,10 @@
       <div class="promo__wrapper">
         <h1 class="promo__heading">Функциональное<br> питание для котов</h1>
         <p class="promo__text">Занялся собой? Займись котом!</p>
-        <img class="promo__image" src="./img/index-can-mobile.png"
-          alt="Банка корма для кошек и котов CAT ENERGY со вкусом курицы, 500 грамм.">
+        <div class="promo__image-wrapper">
+          <img class="promo__image" src="./img/index-can-mobile.png"
+            alt="Банка корма для кошек и котов CAT ENERGY со вкусом курицы, 500 грамм.">
+        </div>
         <a href="#" class="promo__button button">
           <span class="promo__button-text button-text">Подобрать программу</span>
         </a>
@@ -107,17 +109,22 @@
             <dd class="example__definition">60 дней</dd>
           </div>
         </dl>
+        <p class="example__spending"><span>Затраты на питание:</span> <span>15 000 руб.</span></p>
       </div>
       <div class="example__wrapper">
-        <p class="example__spending">Затраты на питание: 15 000 руб.</p>
-        <div class="example__images">
-          <img class="example__image example__image--right" src="./img/before-mobile.png" width="280" height="232"
-            alt="Кот до употребления корма: выглядит ленивым, толстым и страшным">
-          <img class="example__image example__image--left example__image--active" src="./img/after-mobile.png"
-            width="243" height="232" alt="Кот после употребления корма: выглядит молодым, худым и бодрым">
+        <div class="example__images" style="grid-template-columns: 50% 1fr;">
+          <div class="example__image example__image--right">
+            <img src="./img/before-mobile.png" width="280" height="232"
+              alt="Кот до употребления корма: выглядит ленивым, толстым и страшным">
+          </div>
+          <div class="example__image example__image--left example__image--active">
+            <img src="./img/after-mobile.png" width="243" height="232"
+              alt="Кот после употребления корма: выглядит молодым, худым и бодрым">
+          </div>
         </div>
         <div class="example__switcher switcher switcher--right-active">
           <button class="switcher__button switcher__button--was" type="button">Было</button>
+          <input class="switcher__bar" type="range" value="50" min="17" max="83">
           <button class="switcher__button switcher__button--became" type="button">Стало</button>
         </div>
       </div>
@@ -187,75 +194,7 @@
     </div>
   </footer>
 
-  <script>
-    var navMain = document.querySelector('.main-nav');
-    var navToggler = document.querySelector('.page-header__toggler-button');
-
-    navMain.classList.remove('main-nav--nojs');
-
-    navToggler.addEventListener('click', function () {
-      if (navToggler.classList.contains('page-header__toggler-button--closed')) {
-        navToggler.classList.remove('page-header__toggler-button--closed');
-        navMain.classList.remove('main-nav--closed');
-        navToggler.classList.add('page-header__toggler-button--opened');
-        navMain.classList.add('main-nav--opened');
-      } else {
-        navToggler.classList.add('page-header__toggler-button--closed');
-        navMain.classList.add('main-nav--closed');
-        navToggler.classList.remove('page-header__toggler-button--opened');
-        navMain.classList.remove('main-nav--opened');
-      }
-    });
-
-    var switcherButtonWas = document.querySelector('.switcher__button--was');
-    var switcherButtonBecame = document.querySelector('.switcher__button--became');
-    var exampleImageRight = document.querySelector('.example__image--right');
-    var exampleImageLeft = document.querySelector('.example__image--left');
-    var switcher = document.querySelector('.switcher');
-
-    // Левая кнопка
-    switcherButtonWas.addEventListener('click', function () {
-      if (exampleImageRight.classList.contains('example__image--active')) {
-      } else {
-        exampleImageRight.classList.add('example__image--active');
-      }
-    });
-
-    switcherButtonWas.addEventListener('click', function () {
-      if (exampleImageLeft.classList.contains('example__image--active')) {
-        exampleImageLeft.classList.remove('example__image--active');
-      } else { }
-    });
-
-    switcherButtonWas.addEventListener('click', function () {
-      if (switcher.classList.contains('switcher--right-active')) {
-        switcher.classList.remove('switcher--right-active');
-        switcher.classList.add('switcher--left-active');
-      }
-    });
-
-    // Правая кнопка
-    switcherButtonBecame.addEventListener('click', function () {
-      if (exampleImageLeft.classList.contains('example__image--active')) {
-      } else {
-        exampleImageLeft.classList.add('example__image--active');
-      }
-    });
-
-    switcherButtonBecame.addEventListener('click', function () {
-      if (exampleImageRight.classList.contains('example__image--active')) {
-        exampleImageRight.classList.remove('example__image--active');
-      } else { }
-    });
-
-    switcherButtonBecame.addEventListener('click', function () {
-      if (switcher.classList.contains('switcher--left-active')) {
-        switcher.classList.remove('switcher--left-active');
-        switcher.classList.add('switcher--right-active');
-      }
-    });
-
-  </script>
+  <script src="/js/index.js"></script>
 
 </body>
 
