@@ -38,7 +38,7 @@
     </div>
   </header>
 
-  <main class="page-main">
+  <main class="page-main page-main--form">
     <div class="page-main__form-title-wrapper">
       <h1 class="page-main__heading page-main__heading--form">Подбор программы</h1>
       <p class="page-main__subheading">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
@@ -72,13 +72,13 @@
             </ul>
           </fieldset>
 
-          <fieldset class="form__group field-group">
+          <fieldset class="form__group field-group field-group--purpose">
             <legend class="visually-hidden">Цель программы</legend>
 
             <ul class="field-group__list">
               <li class="field-group__item control">
                 <label class="control__radio">
-                  <input class="control__input" name="target" type="radio" value="fit">
+                  <input class="control__input" name="target" type="radio" value="fit" checked>
                   <span class="control__mark"></span>
                   <span class="control__lead">Похудение</span>
                 </label>
@@ -120,7 +120,7 @@
             </ul>
           </fieldset>
 
-          <div class="form__group field-group">
+          <div class="form__group field-group field-group--comment">
             <label class="field-group__heading" for="comment">Комментарий</label>
 
             <div class="field">
@@ -129,36 +129,36 @@
             </div>
           </div>
 
-          <fieldset class="form__group field-group">
+          <fieldset class="form__group field-group field-group--addition">
             <legend class="field-group__heading">Дополнительно</legend>
 
             <ul class="field-group__list field-group__list--additionally">
-              <li class="field-group__item control">
+              <li class="field-group__item control control--checkbox">
                 <label class="control__radio">
                   <input class="control__input" name="additional" type="checkbox" value="sweetener" checked>
                   <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__lead">Сахарозаменитель</span>
+                  <span class="control__lead control__lead--checkbox">Сахарозаменитель</span>
                 </label>
               </li>
-              <li class="field-group__item control">
+              <li class="field-group__item control control--checkbox">
                 <label class="control__radio">
                   <input class="control__input" name="additional" type="checkbox" value="water">
                   <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__lead">Питьевая вода</span>
+                  <span class="control__lead control__lead--checkbox">Питьевая вода</span>
                 </label>
               </li>
-              <li class="field-group__item control">
+              <li class="field-group__item control control--checkbox">
                 <label class="control__radio">
                   <input class="control__input" name="additional" type="checkbox" value="milk">
                   <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__lead">Молоко</span>
+                  <span class="control__lead control__lead--checkbox">Молоко</span>
                 </label>
               </li>
-              <li class="field-group__item control">
+              <li class="field-group__item control control--checkbox">
                 <label class="control__radio">
                   <input class="control__input" name="additional" type="checkbox" value="vitamins">
                   <span class="control__mark control__mark--checkbox"></span>
-                  <span class="control__lead">Витамины</span>
+                  <span class="control__lead control__lead--checkbox">Витамины</span>
                 </label>
               </li>
             </ul>

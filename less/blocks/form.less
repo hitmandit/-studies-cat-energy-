@@ -3,6 +3,10 @@
 }
 
 .form-wrapper {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 70px;
+  }
+
   & .form__group {
     border-bottom: 1px solid @color-grey-3;
   }
@@ -10,6 +14,14 @@
   & .field-group {
     padding-top: 20px;
     padding-bottom: 20px;
+
+    &--addition {
+      border: none;
+    }
+
+    &--comment {
+      border: none;
+    }
 
     @media (min-width: @tablet-width) {
       padding-top: 0;
@@ -19,17 +31,17 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
     .margin-desktop-110px();
+
+    &:first-child {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      margin-bottom: 0;
+    }
 
     & .form__group {
       padding: 0;
-    }
-
-    & .form__group:last-child {
-      border: 1px solid @color-grey-decoration-2;
     }
   }
 
@@ -37,11 +49,21 @@
     & .field-group:last-of-type .field-group__list {
       border: 1px solid @color-grey-decoration-2;
     }
+
+    & .field-group:last-of-type .field-group__list--additionally {
+      border: none;
+    }
   }
 
   @media (min-width: @desktop-width) {
     & .field-group:last-of-type .field-group__list {
       border: 0;
+    }
+  }
+
+  .field-group--purpose {
+    @media (min-width: @desktop-width) {
+      border: 1px solid @color-grey-decoration-2;
     }
   }
 }
@@ -61,15 +83,16 @@
 }
 
 .form__sending {
-  margin-top: 34px;
   .margin-mobile-20px();
 
   @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 72px;
+    margin-left: 70px;
+    margin-right: 70px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    margin-left: 70px;
-    margin-right: 70px;
   }
 
   @media (min-width: @desktop-width) {
@@ -103,8 +126,12 @@
   font-family: @font-body;
   line-height: 16px;
   text-align: center;
-}
 
-@media (min-width: @tablet-width) {
-  text-align: start;
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+    text-align: start;
+  }
 }
