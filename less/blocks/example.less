@@ -200,6 +200,8 @@
 
   @media (min-width: @tablet-width) {
     display: grid;
+    width: 592px;
+    height: 511px;
   }
 }
 
@@ -207,10 +209,16 @@
   position: absolute;
   left: 50%;
   display: none;
+  width: 296px;
   transform: translate(-50%, 0);
 
   & img {
     max-width: none;
+    width: 296px;
+
+    @media (min-width: @tablet-width) {
+      width: 592px;
+    }
   }
 
   &--active {
@@ -229,7 +237,6 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: flex-end;
-    margin-right: 8px;
   }
 }
 

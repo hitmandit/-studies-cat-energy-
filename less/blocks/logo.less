@@ -4,18 +4,38 @@
   justify-content: center;
   text-decoration: none;
 
-  @media (min-width: @tablet-width) {
-    border: none;
-    padding: 0;
-    text-align: start;
+  &--header {
+    flex-grow: 1;
   }
 }
 
 .logo__image {
+  display: block;
+
+  &--footer {
+    width: 128px;
+  }
+
+  &--header {
+    width: 34px;
+
+    @media (min-width: @tablet-width) {
+      width: 174px;
+      background-size: cover;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 202px;
+    }
+  }
+}
+
+.logo__sign {
   margin-left: auto;
   margin-right: auto;
+  width: 101px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 0;
+    display: none;
   }
 }
