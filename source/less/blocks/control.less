@@ -14,6 +14,40 @@
       margin-bottom: 30px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      margin-top: 21px;
+    }
+
+    &:last-child {
+      margin-bottom: 21px;
+    }
+  }
+}
+
+.control--checkbox {
+  margin: 0;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &:last-child {
+    margin: 0;
+  }
+
+  @media (max-width: @tablet-width) {
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .control__radio {
@@ -62,6 +96,12 @@
     background-image: url("../img/icon_checkbox.svg");
     background-repeat: no-repeat;
     transform: translate(-50%, -50%);
+
+    @media (min-width: @tablet-width) {
+      width: 24px;
+      height: 19px;
+      background-size: cover;
+    }
   }
 }
 
@@ -86,14 +126,25 @@
 
   &--checkbox {
     border-radius: 0;
+
+    @media (min-width: @tablet-width) {
+      left: 0;
+    }
   }
 }
 
 .control__lead {
   padding-left: 45px;
+  display: inline-block;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     padding-left: 90px;
+  }
+
+  &--checkbox {
+    @media (min-width: @tablet-width) {
+      padding-left: 60px;
+    }
   }
 }
