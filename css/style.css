@@ -738,7 +738,7 @@ img {
   background-color: #68b738;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-image: url("/img/promo.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #ffffff 302px);
+  background-image: url("../img/promo.jpg"), linear-gradient(#63a63b 0, #63a63b 302px, #ffffff 302px);
   color: #ffffff;
 }
 @media (min-width: 768px) {
@@ -764,7 +764,7 @@ img {
     background-color: #63a63b;
     background-position: 0 100%;
     background-repeat: no-repeat;
-    background-image: url("/img/promo-desktop.jpg");
+    background-image: url("../img/promo-desktop.jpg");
   }
 }
 .promo__wrapper {
@@ -2626,16 +2626,6 @@ img {
 }
 .field__input::placeholder {
   color: #444444;
-}
-.field__input[type="email"]::after {
-  content: "";
-  position: absolute;
-  top: 24px;
-  left: 13px;
-  width: 67px;
-  height: 50px;
-  background-image: url("../img/cat-fat.svg");
-  background-repeat: no-repeat;
 }
 .field__texarea {
   padding-top: 10px;
