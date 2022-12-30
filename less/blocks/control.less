@@ -54,6 +54,16 @@
   font-size: 16px;
   text-transform: uppercase;
   color: @color-dark-grey-2;
+  cursor: pointer;
+
+  &:hover .control__mark {
+    border: 1px solid @color-grey-decoration-5;
+  }
+
+  & .control__input:disabled ~ .control__mark,
+  & .control__input:disabled ~ .control__lead {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;

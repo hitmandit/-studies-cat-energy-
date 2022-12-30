@@ -20,6 +20,9 @@
     & .social__link svg {
       fill: @color-grey-5;
       stroke: @color-grey-5;
+        &:hover {
+        stroke: @color-basic;
+      }
     }
   }
 }
@@ -32,5 +35,13 @@
 
   & svg {
     fill: @color-grey-5;
+
+    &:hover {
+      fill: @color-basic;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

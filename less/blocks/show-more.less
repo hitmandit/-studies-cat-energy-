@@ -22,7 +22,7 @@
 
   &::after {
     content: "";
-    top: 52px;
+    top: 25px;
     left: 50%;
     position: absolute;
     width: 2px;
@@ -30,13 +30,14 @@
     background-color: @color-grey-decoration-4;
 
     @media (min-width: @tablet-width) {
+      top: 52px;
       height: 60px;
     }
   }
 
   &::before {
     content: "";
-    top: 52px;
+    top: 25px;
     position: absolute;
     left: 50%;
     width: 2px;
@@ -45,6 +46,7 @@
     transform: rotate(90deg);
 
     @media (min-width: @tablet-width) {
+      top: 52px;
       height: 60px;
     }
   }
@@ -84,14 +86,14 @@
   background-color: @color-basic-grey;
   color: @color-dark-grey-1;
 
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   right: 0;
-  // }
+  &:hover {
+    background-color: @color-basic-grey;
+  }
+
+  &:active {
+    background-color: @color-basic-grey;
+    color: fade(@color-dark-grey-1, 30%);
+  }
 
   @media (min-width: @tablet-width) {
     margin-left: 38px;

@@ -7,6 +7,26 @@
   text-decoration: none;
   text-align: center;
 
+  &:hover {
+    .developer__sign {
+      fill: @color-basic;
+    }
+
+    .developer__image {
+      fill: @color-basic;
+    }
+  }
+
+  &:active {
+    .developer__sign {
+      opacity: 0.3;
+    }
+
+    .developer__image {
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     justify-content: end;
     margin: 0;
@@ -14,7 +34,13 @@
 }
 
 .developer__sign {
+  fill: @color-dark-grey-1;
+
   @media (min-width: @tablet-width) {
     margin-right: 22px;
   }
+}
+
+.developer__image {
+  fill: @color-grey-5;
 }

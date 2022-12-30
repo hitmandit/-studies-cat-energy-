@@ -30,6 +30,21 @@
   border: 1px solid @color-grey-decoration-2;
   border-radius: 0;
 
+  &:hover {
+    border: 1px solid @color-grey-4;
+    border-radius: 0;
+  }
+
+  &:focus {
+    outline: 2px solid @color-dark-grey-1;
+    outline-offset: -2px;
+  }
+
+  &:focus:invalid {
+    outline: 2px solid @color-red-decoration-1;
+    outline-offset: -2px;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;

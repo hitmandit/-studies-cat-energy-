@@ -40,6 +40,12 @@
   color: @color-dark-grey-2;
   text-transform: uppercase;
 
+  @media (max-width: @tablet-width) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin: 0;
     margin-top: 34px;
@@ -127,14 +133,5 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
 }
 

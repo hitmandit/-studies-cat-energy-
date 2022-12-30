@@ -352,6 +352,13 @@ img {
   border: none;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #5eaa2f;
+}
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 .button-text {
   display: block;
@@ -359,12 +366,23 @@ img {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.button-text:active {
+  opacity: 0.3;
+}
 .page {
   height: 100%;
   min-width: 320px;
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
+}
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.page__footer {
+  flex-grow: 1;
 }
 @media (max-width: 767px) {
   .page-header {
@@ -584,6 +602,12 @@ img {
   justify-content: center;
   text-decoration: none;
 }
+.logo:hover {
+  opacity: 0.8;
+}
+.logo:active {
+  opacity: 0.6;
+}
 .logo--header {
   flex-grow: 1;
 }
@@ -678,6 +702,12 @@ img {
   max-width: 100%;
   list-style-type: none;
   overflow-wrap: break-word;
+}
+.main-nav__item:hover {
+  opacity: 0.8;
+}
+.main-nav__item:active {
+  opacity: 0.6;
 }
 @media (min-width: 768px) {
   .main-nav__item:last-child {
@@ -1100,6 +1130,9 @@ img {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+}
+.catalog-sections__link:active {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .catalog-sections__link {
@@ -1675,6 +1708,7 @@ img {
   text-transform: uppercase;
   border: none;
   background-color: #eaeaea;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .switcher__button {
@@ -1683,6 +1717,9 @@ img {
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted #cdcdcd;
+  }
+  .switcher__button:hover {
+    border-bottom: 1px solid #cdcdcd;
   }
 }
 @media (min-width: 1440px) {
@@ -1818,6 +1855,9 @@ img {
   fill: #666666;
   stroke: #666666;
 }
+.social__item:last-child .social__link svg:hover {
+  stroke: #68b738;
+}
 .social__link {
   position: absolute;
   top: 50%;
@@ -1826,6 +1866,12 @@ img {
 }
 .social__link svg {
   fill: #666666;
+}
+.social__link svg:hover {
+  fill: #68b738;
+}
+.social__link svg:active {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .catalog-list {
@@ -1904,6 +1950,11 @@ img {
   line-height: 20px;
   color: #222222;
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .card__heading br {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .card__heading {
@@ -1991,14 +2042,6 @@ img {
   line-height: 20px;
   text-align: center;
 }
-.card__button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 .show-more {
   position: relative;
   text-align: center;
@@ -2023,7 +2066,7 @@ img {
 }
 .show-more__heading::after {
   content: "";
-  top: 52px;
+  top: 25px;
   left: 50%;
   position: absolute;
   width: 2px;
@@ -2032,12 +2075,13 @@ img {
 }
 @media (min-width: 768px) {
   .show-more__heading::after {
+    top: 52px;
     height: 60px;
   }
 }
 .show-more__heading::before {
   content: "";
-  top: 52px;
+  top: 25px;
   position: absolute;
   left: 50%;
   width: 2px;
@@ -2047,6 +2091,7 @@ img {
 }
 @media (min-width: 768px) {
   .show-more__heading::before {
+    top: 52px;
     height: 60px;
   }
 }
@@ -2085,6 +2130,13 @@ img {
   line-height: 20px;
   background-color: #f2f2f2;
   color: #444444;
+}
+.show-more__button:hover {
+  background-color: #f2f2f2;
+}
+.show-more__button:active {
+  background-color: #f2f2f2;
+  color: rgba(68, 68, 68, 0.3);
 }
 @media (min-width: 768px) {
   .show-more__button {
@@ -2314,21 +2366,38 @@ img {
   min-height: 289px;
   color: #ffffff;
   background-color: #63a63b;
-  background-image: url("/img/catcase.jpg");
+  background-image: url("../img/catbag-small.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+}
+@media (min-resolution: 2dppx) {
+  .offer {
+    background-image: url("../img/catbag-small@2x.jpg");
+  }
 }
 @media (min-width: 768px) {
   .offer {
     min-height: 200px;
     justify-content: end;
     align-items: center;
+    background-image: url("../img/catbag-medium.jpg");
+  }
+}
+@media (min-width: 768px) and (min-resolution: 2dppx) {
+  .offer {
+    background-image: url("../img/catbag-medium@2x.jpg");
   }
 }
 @media (min-width: 1440px) {
   .offer {
     align-items: flex-end;
+    background-image: url("../img/catbag-large.jpg");
+  }
+}
+@media (min-width: 1440px) and (min-resolution: 2dppx) {
+  .offer {
+    background-image: url("../img/catbag-large@2x.jpg");
   }
 }
 .offer__text {
@@ -2348,7 +2417,7 @@ img {
   bottom: 151px;
   width: 78px;
   height: 80px;
-  background-image: url("/img/icon_gift.svg");
+  background-image: url("../img/icon_gift.svg");
   transform: translate(-50%, 0);
 }
 @media (min-width: 768px) {
@@ -2680,6 +2749,18 @@ img {
   border: 1px solid #e7e7e7;
   border-radius: 0;
 }
+.field__input:hover {
+  border: 1px solid #cdcdcd;
+  border-radius: 0;
+}
+.field__input:focus {
+  outline: 2px solid #444444;
+  outline-offset: -2px;
+}
+.field__input:focus:invalid {
+  outline: 2px solid #ff8282;
+  outline-offset: -2px;
+}
 @media (min-width: 768px) {
   .field__input {
     font-size: 20px;
@@ -2747,6 +2828,14 @@ img {
   font-size: 16px;
   text-transform: uppercase;
   color: #222222;
+  cursor: pointer;
+}
+.control__radio:hover .control__mark {
+  border: 1px solid #bababa;
+}
+.control__radio .control__input:disabled ~ .control__mark,
+.control__radio .control__input:disabled ~ .control__lead {
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .control__radio {
@@ -2844,15 +2933,33 @@ img {
   text-decoration: none;
   text-align: center;
 }
+.developer:hover .developer__sign {
+  fill: #68b738;
+}
+.developer:hover .developer__image {
+  fill: #68b738;
+}
+.developer:active .developer__sign {
+  opacity: 0.3;
+}
+.developer:active .developer__image {
+  opacity: 0.3;
+}
 @media (min-width: 768px) {
   .developer {
     justify-content: end;
     margin: 0;
   }
 }
+.developer__sign {
+  fill: #444444;
+}
 @media (min-width: 768px) {
   .developer__sign {
     margin-right: 22px;
   }
+}
+.developer__image {
+  fill: #666666;
 }
 /*# sourceMappingURL=style.css.map */

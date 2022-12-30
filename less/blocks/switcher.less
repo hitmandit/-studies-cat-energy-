@@ -143,6 +143,7 @@
   text-transform: uppercase;
   border: none;
   background-color: @color-grey-2;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 50px;
@@ -150,6 +151,10 @@
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted @color-grey-4;
+
+    &:hover {
+      border-bottom: 1px solid @color-grey-4;
+    }
   }
 
   @media (min-width: @desktop-width) {
