@@ -5,19 +5,33 @@
   min-height: 289px;
   color: @color-white;
   background-color: @color-basic-1;
-  background-image: url("/img/catcase.jpg");
+  background-image: url("../img/catbag-small.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/catbag-small@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
     min-height: 200px;
     justify-content: end;
     align-items: center;
+    background-image: url("../img/catbag-medium.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catbag-medium@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     align-items: flex-end;
+    background-image: url("../img/catbag-large.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catbag-large@2x.jpg");
+    }
   }
 }
 
@@ -38,7 +52,7 @@
     bottom: 151px;
     width: 78px;
     height: 80px;
-    background-image: url("/img/icon_gift.svg");
+    background-image: url("../img/icon_gift.svg");
     transform: translate(-50%, 0);
 
     @media (min-width: @tablet-width) {
