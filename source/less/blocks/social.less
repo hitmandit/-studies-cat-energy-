@@ -15,16 +15,6 @@
   width: 40px;
   height: 40px;
   list-style-type: none;
-
-  &:last-child {
-    & .social__link svg {
-      fill: @color-grey-5;
-      stroke: @color-grey-5;
-        &:hover {
-        stroke: @color-basic;
-      }
-    }
-  }
 }
 
 .social__link {
@@ -32,16 +22,21 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: @color-grey-5;
 
-  & svg {
-    fill: @color-grey-5;
+  &:hover {
+    color: @color-basic;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--facebook {
+    stroke: @color-grey-5;
 
     &:hover {
-      fill: @color-basic;
-    }
-
-    &:active {
-      opacity: 0.3;
+      stroke: @color-basic;
     }
   }
 }
