@@ -1,4 +1,5 @@
 .field {
+  position: relative;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -38,11 +39,27 @@
   &:focus {
     outline: 2px solid @color-dark-grey-1;
     outline-offset: -2px;
+
+    & + .field__img--email {
+      stroke: @color-basic;
+    }
+
+    & + .field__img--phone {
+      fill: @color-basic;
+    }
   }
 
   &:focus:invalid {
     outline: 2px solid @color-red-decoration-1;
     outline-offset: -2px;
+
+    & + .field__img--email {
+      stroke: @color-red-decoration-1;
+    }
+
+    & + .field__img--phone {
+      fill: @color-red-decoration-1;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -62,5 +79,17 @@
 
   @media (min-width: @tablet-width) {
     min-height: 174px;
+  }
+}
+
+.field__img {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  fill: @color-dark-grey-2;
+  transform: translate(-0, -50%);
+
+  &--email {
+    stroke: @color-dark-grey-2;
   }
 }

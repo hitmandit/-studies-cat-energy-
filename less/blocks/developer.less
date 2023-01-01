@@ -4,43 +4,30 @@
   align-items: center;
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 16px;
   text-decoration: none;
   text-align: center;
+  color: @color-dark-grey-1;
 
-  &:hover {
-    .developer__sign {
-      fill: @color-basic;
-    }
+  & svg {
+    margin-left: 22px;
+    fill: @color-grey-5;
+  }
 
-    .developer__image {
-      fill: @color-basic;
-    }
+  &:hover svg {
+    fill: @color-basic;
   }
 
   &:active {
-    .developer__sign {
-      opacity: 0.3;
-    }
-
-    .developer__image {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 
   @media (min-width: @tablet-width) {
     justify-content: end;
     margin: 0;
+
+    & svg {
+      margin-left: 22px;
+    }
   }
-}
-
-.developer__sign {
-  fill: @color-dark-grey-1;
-
-  @media (min-width: @tablet-width) {
-    margin-right: 22px;
-  }
-}
-
-.developer__image {
-  fill: @color-grey-5;
 }

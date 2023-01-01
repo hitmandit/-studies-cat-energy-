@@ -47,6 +47,8 @@
   margin: 0;
   padding: 0;
 
+  counter-reset: process;
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -66,6 +68,8 @@
   margin-bottom: 26px;
   min-height: 60px;
   list-style-type: none;
+
+  counter-increment: process;
 
   @media (min-width: @tablet-width) {
     margin: 0;
@@ -88,6 +92,7 @@
   &::before {
     @media (min-width: @tablet-width) {
       position: absolute;
+      content: counter(process);
       top: -150px;
       left: 128px;
       font-family: @font-heading;
@@ -95,24 +100,6 @@
       line-height: 280px;
       color: @color-basic-grey;
       z-index: -1;
-    }
-  }
-
-  @media (min-width: @tablet-width) {
-    &:nth-child(1)::before {
-      content: "1";
-    }
-
-    &:nth-child(2)::before {
-      content: "2";
-    }
-
-    &:nth-child(3)::before {
-      content: "3";
-    }
-
-    &:nth-child(4)::before {
-      content: "4";
     }
   }
 
@@ -135,19 +122,19 @@
     }
   }
 
-  &:nth-child(1)::after {
+  &--leaf::after {
     background-image: url("../img/decoration-leaf.svg");
   }
 
-  &:nth-child(2)::after {
+  &--powder::after {
     background-image: url("../img/decoration_powder.svg");
   }
 
-  &:nth-child(3)::after {
+  &--meal::after {
     background-image: url("../img/decoration-cutlery.svg");
   }
 
-  &:nth-child(4)::after {
+  &--weight::after {
     background-image: url("../img/decoration-alarm.svg");
   }
 

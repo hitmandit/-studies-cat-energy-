@@ -1228,6 +1228,7 @@ img {
 .process__list {
   margin: 0;
   padding: 0;
+  counter-reset: process;
 }
 @media (min-width: 768px) {
   .process__list {
@@ -1249,6 +1250,7 @@ img {
   margin-bottom: 26px;
   min-height: 60px;
   list-style-type: none;
+  counter-increment: process;
 }
 @media (min-width: 768px) {
   .process__item {
@@ -1272,6 +1274,7 @@ img {
 @media (min-width: 768px) {
   .process__item::before {
     position: absolute;
+    content: counter(process);
     top: -150px;
     left: 128px;
     font-family: "Oswald", "Arial", sans-serif;
@@ -1279,20 +1282,6 @@ img {
     line-height: 280px;
     color: #f2f2f2;
     z-index: -1;
-  }
-}
-@media (min-width: 768px) {
-  .process__item:nth-child(1)::before {
-    content: "1";
-  }
-  .process__item:nth-child(2)::before {
-    content: "2";
-  }
-  .process__item:nth-child(3)::before {
-    content: "3";
-  }
-  .process__item:nth-child(4)::before {
-    content: "4";
   }
 }
 .process__item::after {
@@ -1314,16 +1303,16 @@ img {
     transform: translate(0, -100%);
   }
 }
-.process__item:nth-child(1)::after {
+.process__item--leaf::after {
   background-image: url("../img/decoration-leaf.svg");
 }
-.process__item:nth-child(2)::after {
+.process__item--powder::after {
   background-image: url("../img/decoration_powder.svg");
 }
-.process__item:nth-child(3)::after {
+.process__item--meal::after {
   background-image: url("../img/decoration-cutlery.svg");
 }
-.process__item:nth-child(4)::after {
+.process__item--weight::after {
   background-image: url("../img/decoration-alarm.svg");
 }
 @media (min-width: 1440px) {
@@ -1856,27 +1845,24 @@ img {
   height: 40px;
   list-style-type: none;
 }
-.social__item:last-child .social__link svg {
-  fill: #666666;
-  stroke: #666666;
-}
-.social__item:last-child .social__link svg:hover {
-  stroke: #68b738;
-}
 .social__link {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #666666;
 }
-.social__link svg {
-  fill: #666666;
+.social__link:hover {
+  color: #68b738;
 }
-.social__link svg:hover {
-  fill: #68b738;
-}
-.social__link svg:active {
+.social__link:active {
   opacity: 0.3;
+}
+.social__link--facebook {
+  stroke: #666666;
+}
+.social__link--facebook:hover {
+  stroke: #68b738;
 }
 @media (min-width: 768px) {
   .catalog-list {
@@ -2725,6 +2711,7 @@ img {
   }
 }
 .field {
+  position: relative;
   display: flex;
   align-items: center;
   text-transform: uppercase;
@@ -2762,9 +2749,21 @@ img {
   outline: 2px solid #444444;
   outline-offset: -2px;
 }
+.field__input:focus + .field__img--email {
+  stroke: #68b738;
+}
+.field__input:focus + .field__img--phone {
+  fill: #68b738;
+}
 .field__input:focus:invalid {
   outline: 2px solid #ff8282;
   outline-offset: -2px;
+}
+.field__input:focus:invalid + .field__img--email {
+  stroke: #ff8282;
+}
+.field__input:focus:invalid + .field__img--phone {
+  fill: #ff8282;
 }
 @media (min-width: 768px) {
   .field__input {
@@ -2784,6 +2783,16 @@ img {
   .field__texarea {
     min-height: 174px;
   }
+}
+.field__img {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  fill: #222222;
+  transform: translate(0, -50%);
+}
+.field__img--email {
+  stroke: #222222;
 }
 .control {
   position: relative;
@@ -2935,19 +2944,19 @@ img {
   align-items: center;
   margin-left: 20px;
   margin-right: 20px;
+  font-size: 16px;
   text-decoration: none;
   text-align: center;
+  color: #444444;
 }
-.developer:hover .developer__sign {
+.developer svg {
+  margin-left: 22px;
+  fill: #666666;
+}
+.developer:hover svg {
   fill: #68b738;
 }
-.developer:hover .developer__image {
-  fill: #68b738;
-}
-.developer:active .developer__sign {
-  opacity: 0.3;
-}
-.developer:active .developer__image {
+.developer:active {
   opacity: 0.3;
 }
 @media (min-width: 768px) {
@@ -2955,17 +2964,9 @@ img {
     justify-content: end;
     margin: 0;
   }
-}
-.developer__sign {
-  fill: #444444;
-}
-@media (min-width: 768px) {
-  .developer__sign {
-    margin-right: 22px;
+  .developer svg {
+    margin-left: 22px;
   }
-}
-.developer__image {
-  fill: #666666;
 }
 @keyframes transition-img {
   0% {
